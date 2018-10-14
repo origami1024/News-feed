@@ -1,0 +1,175 @@
+body {
+	font-family: Arial;
+	color: #333;
+}
+h1 {
+	margin: 17px auto;
+	width: 75%;
+
+}
+
+main {
+	background-color: lightblue;
+	margin: 13px auto;
+	width: 75%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(6, 15%);
+	grid-template-rows: 25% 25% 25% 25%;
+
+}
+main > .eventcard:nth-child(1)
+{
+	background-color: green;
+	grid-column: span 4;
+	grid-row: span 3;	
+}
+main > .eventcard:nth-child(n+2):nth-child(-n+4) >.card_short
+{
+	
+	display: none;
+}
+main > .eventcard:nth-child(n+2):nth-child(-n+4) >.card_pic
+{
+	
+	display: none;
+}
+main > .eventcard:nth-child(n+5):nth-child(-n+6) >.card_pic
+{
+	
+	display: none;
+}
+main > .eventcard:nth-child(n+5) >.card_short
+{
+	
+	font-size: 20px;
+}
+
+main > .eventcard:nth-child(n+2):nth-child(-n+4)
+{
+	background-color: red;
+	grid-column: span 2;
+}
+
+main > .eventcard:nth-child(n+5)
+{
+	#background-color: blue;
+	grid-column: span 3;
+}
+
+
+.eventcard {
+	background-color: darkorange;
+	padding: 20px;
+	border-radius:20px;
+	
+	position: relative;
+	display: flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+.eventcard:hover:before {
+	position: absolute;
+	display: block;
+	top: 0px;
+	right: 0px;
+  	content: "derp!";
+
+  	
+}
+.eventcard:hover:after {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+  	content: "1234";
+
+}
+
+.card_title {
+	width: 100%;
+	display: flex;
+	background-color: pink;
+	margin-bottom: 20px;
+	height: 56px;
+}
+.card_title h2 {
+	#display: block;
+	margin:auto 0;
+	margin-left: 15px;
+
+	
+}
+.card_sub {
+	background-color: yellow;
+	display: flex;
+	flex-wrap: wrap;
+	#align-items: stretch;
+	width: 100%;
+}
+.card_device {
+	min-width: 180px;
+	margin-bottom: 21px;
+	margin-right: auto;
+	
+}
+.card_date {
+	min-width: 110px;
+	
+}
+.card_icon {
+	background-color: purple;
+	#display: block;
+	
+}
+
+.card_pic {
+	#width: calc(100%-20px);
+	border-radius:20px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	width: calc(100% - 40px);
+
+}
+
+
+.card_short {
+	font-size: 24px;
+	background-color: gray;
+	color: black;
+	
+}
+.card_short_content {
+	display: flex;
+	background-color: magenta;
+	justify-content: space-between;
+}
+
+.card_warning_short {
+	border-radius:20px;
+	background-color: lime;
+	padding: 20px;
+	
+	position: relative;
+	left:-20px;
+	width: 100%;
+	bottom: -20px;
+	margin-top: -20px;
+}
+.warningcard {
+	background-color: darkred;
+}
+/*
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px 60px 1fr 100px 80px;
+
+	#grid-template-columns: repeat(6, auto);
+	#grid-template-rows: repeat(4, auto);
+	#repeat(6, auto);
+	#repeat(4, auto);
+*/

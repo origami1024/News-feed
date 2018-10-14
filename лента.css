@@ -1,0 +1,179 @@
+body {
+	font-family: Arial;
+	color: #333333;
+}
+
+h1 {
+	margin: 17px auto;
+	width: 75%;
+}
+
+main {
+	background-color: #FFFFFF;
+	margin: 13px auto;
+	width: 75%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(6, 15%);
+	grid-template-rows: 25% 25% 25% 25%;
+}
+
+main > .eventcard:nth-child(1) {
+	grid-column: span 4;
+	grid-row: span 3;
+	min-height: 454px;	
+}
+
+main > .eventcard:nth-child(n+2):nth-child(-n+4) >.card_short
+{	
+	display: none;
+}
+
+main > .eventcard:nth-child(n+2):nth-child(-n+4) >.card_pic
+{
+	display: none;
+}
+
+main > .eventcard:nth-child(n+5):nth-child(-n+6) >.card_pic
+{
+	display: none;
+}
+
+main > .eventcard:nth-child(n+5) >.card_short
+{	
+	font-size: 20px;
+}
+
+main > .eventcard:nth-child(n+2):nth-child(-n+4)
+{
+	grid-column: span 2;
+}
+
+main > .eventcard:nth-child(n+5)
+{
+	grid-column: span 3;
+}
+
+.eventcard {
+	background-color: #FAFAFA;
+	padding: 20px;
+	border-radius:20px;
+	position: relative;
+	display: flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	opacity:1;
+}
+
+.btn {
+	position: absolute;
+	z-index: 1;
+	right: 20px;
+	display: none;
+}
+
+.btnclose {	
+	top: 20px;
+}
+
+.btnnext {	
+	bottom: 20px;
+}
+
+.eventcard:hover .btn {
+	display: block;
+}
+
+.eventcard:hover {
+	background-color: #f3f3f3;
+	box-shadow: 0px 3px #EAE5E5;
+}
+
+.card_warning_short:hover {
+	background-color: #CA4230;
+	box-shadow: 0px 3px #EAE5E5;
+	color: white;
+}
+.warningcard:hover {
+	background-color: #CA4230;
+	box-shadow: 0px 3px #EAE5E5;
+}
+
+.card_title {
+	width: 100%;
+	display: flex;
+	margin-bottom: 20px;
+	height: 56px;
+	overflow: hidden;
+}
+.card_title h2 {
+	display: block;
+	margin:auto 0;
+	margin-left: 15px;
+	overflow: hidden;	
+}
+
+.card_sub {
+	
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.card_device {
+	min-width: 180px;
+	margin-bottom: 21px;
+	margin-right: auto;
+	
+}
+.card_date {
+	min-width: 110px;
+	
+}
+
+.card_pic {
+	border-radius:20px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	width: calc(100% - 40px);
+
+}
+
+
+.card_short {
+	font-size: 24px;	
+	color: black;
+	width: 100%;
+	
+}
+.card_short_content {
+	display: flex;
+	
+	justify-content: space-between;
+}
+
+.card_warning_short {
+	border-radius:20px;
+	background-color: #FAFAFA;
+	padding: 20px;
+	display: block;
+	position: relative;
+	left:-20px;
+	width: 100%;
+	bottom: -20px;
+	margin-top: -20px;
+	
+}
+.warningcard {
+	background-color: #DB5341;
+	color: white;	
+}
+
+main > .eventcard:nth-child(1) > .card_warning_short {	
+	min-height: 320px;
+	border: 1px solid #DB5341;
+	width: calc(100% - 2px);
+}
+
