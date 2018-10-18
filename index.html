@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Лента Событий</title>
+	<link rel="stylesheet" href="main.css">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<header id="header">
+		<input type="checkbox"/>
+		<ul id="menu">
+			<li><a class="navlink navcurrent" href="index.html">События</a></li>
+			<li><a class="navlink" href="index.html">Сводка</a></li>
+			<li><a class="navlink" href="index.html">Устройства</a></li>
+			<li><a class="navlink" href="index.html">Сценарии</a></li>
+		</ul>
+	</header>
+	<h1>Лента Событий</h1>
+	<main id="main">
+		<div class="eventcard big">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/stats.svg" alt="key">
+				</div>
+				<h2>Еженедельный отчет по расходам ресурсов</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Сенсоры потребления</div>
+				<div class="card_date">19:00, Сегодня</div>
+
+			</div>
+			<div class="card_short font24">
+				<div style="margin-bottom: 30px;">Так держать! За последнюю неделю вы потратили на 10% меньше ресурсов, чем неделей ранее.
+				</div>
+			</div>
+			
+			<img class="card_pic" src="assets/richdata.png" alt="waves">
+			
+		</div>
+		<div class="eventcard small">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+				<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/key.svg" alt="key">
+				</div>
+				<h2>Дверь открыта</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Сенсор входной двери
+				</div>
+				<div class="card_date">18:50, Сегодня</div>
+
+			</div>
+		</div>
+		<div class="eventcard small">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/robot-cleaner.svg" alt="robo clean">
+				</div>
+				<h2>Уборка закончена</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Пылесос</div>
+				<div class="card_date">18:45, Сегодня</div>
+
+			</div>
+		</div>
+		<div class="eventcard small">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/router.svg" alt="router">
+				</div>
+				<h2>Новый пользователь</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Роутер</div>
+				<div class="card_date">18:45, Сегодня</div>
+
+			</div>
+		</div>
+		<div class="eventcard medi">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/thermal.svg" alt="thermal">
+				</div>
+				<h2>Изменен климатический режим</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Сенсор микроклимата</div>
+				<div class="card_date">18:30, Сегодня</div>
+
+			</div>
+			<div class="card_short">
+				Установлен Климатический режим «Фиджи»
+				<div class="card_short_content">
+					<div>Температура: <b>24 C</b></div>
+					<div>Влажность: <b>80%</b></div>	
+				</div>				
+			</div>
+		</div>
+		<div class="eventcard medi warningcard" >
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title warning_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/ac-white.svg" alt="ac-white">
+				</div>
+				<h2>Невозможно включить кондиционер</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Кондиционер</div>
+				<div class="card_date">18:21, Сегодня</div>
+
+			</div>
+			<div class="card_short card_warning_short">
+				В комнате открыто окно, закройте его и повторите попытку	
+			</div>		
+		</div>
+		<!--PART2-->
+		<div class="eventcard medi">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x">
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt="&gt;">
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/music.svg" alt="music">
+				</div>
+				<h2>Музыка включена</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Яндекс.Станция</div>
+				<div class="card_date">18:16, Сегодня</div>
+
+			</div>
+			<div class="card_short">
+				Сейчас проигрывается:
+				<div class="mplayertop">
+					<img class="music-icon" src="assets/music-icon.jpg" alt="music-icon">
+					<div style="flex-grow: 2">
+						<div class="songname">Florence &amp; The Machine - Big God</div>
+						<input class="songrange" value=10 type="range">
+					</div>
+					<div class="songtime">4:31</div>
+				</div>
+				<div style="display: flex;">
+					<img class="musicbtn" src="assets/prev.svg" alt="btnprev">
+					<img class="musicbtn right" src="assets/prev.svg" alt="btnprev">
+					<input class="volrange" value=80 type="range">
+					<div class="volrate">80%</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="eventcard medi">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/fridge.svg" alt="fridge">
+				</div>
+				<h2>Заканчивается молоко</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">
+					Холодильник
+				</div>
+				<div class="card_date">17:23, Сегодня</div>
+
+			</div>
+			<div class="card_short">
+				Кажется, в холодильнике заканчивается молоко. Вы хотите добавить его в список покупок?		
+			</div>
+			<div class="ynform">
+				<button class="ynbtn">Да</button>
+				<button class="ynbtn">Нет</button>
+			</div>
+		</div>
+
+		<div class="eventcard small">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/battery.svg" alt="battery">
+				</div>
+				<h2>Зарядка завершена</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Оконный сенсор</div>
+				<div class="card_date">16:22, Сегодня</div>
+			</div>
+			<div class="card_short20">
+				Ура! Устройство «Оконный сенсор» снова в строю!
+			</div>
+		</div>
+
+		<div class="eventcard big warningcard">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/cam-white.svg" alt="cam-white">
+				</div>
+				<h2>Пылесос застрял</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Сенсор движения</div>
+				<div class="card_date">16:20, Сегодня</div>
+
+			</div>
+			<div id="robot_stuck" class="card_short card_warning_short">
+				<div class="cam font24">Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь.
+				</div>
+			
+				<img class="card_pic" src="assets/image.jpg"
+				srcset="assets/lg.png 3x,
+				 		assets/md.png 2x,
+				 		assets/sm.png 1x" 
+				alt="cam-trouble">
+				<div class="imginfo">
+					<div>Приближение: 78%</div>
+					<div>Яркость: 50%</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="eventcard small">
+			<input type="image" class="btn btnclose" onclick="removeSelf(event)" src="assets/cross.svg" alt="x" />
+			<input type="image" class="btn btnnext" onclick="alert('Hi!')" src="assets/Next.svg" alt=">" />
+			<div class="card_title">
+				<div class="card_icon_container">
+					<img class="card_icon" src="assets/kettle.svg" alt="kettle">
+				</div>
+				<h2>Вода вскипела</h2>
+			</div>
+			<div class="card_sub">
+				<div class="card_device">Чайник</div>
+				<div class="card_date">16:17, Сегодня</div>
+			</div>
+			
+		</div>
+	</main>
+
+
+	<footer id="footer">
+		<ul>
+			<li><a class="navlinkfooter" href="index.html">Помощь</a></li>
+			<li><a class="navlinkfooter" href="index.html">Обратная связь</a></li>
+			<li><a class="navlinkfooter" href="index.html">Разработчикам</a></li>
+			<li><a class="navlinkfooter" href="index.html">Условия использования</a></li>
+		</ul>
+	</footer>
+	<script src="scripts.js"></script>
+</body>
+</html>

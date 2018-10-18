@@ -1,11 +1,17 @@
+/*
+elements = document.getElementsByClassName("header")
+
+//.onclick = function() 
+{removeSelf1(event)};
+
+function removeSelf1(e) {
+    removeSelf(e);
+}
+*/
+
 function removeSelf(e)
 {
-    if (isNaN(parseFloat(e.currentTarget.parentElement.style.opacity))) {
-    		e.currentTarget.parentElement.style.opacity = "1.00"
-    		//alert(parseFloat(e.currentTarget.parentElement.style.opacity));
-    	}
     
-    //e.currentTarget.parentElement.remove();
     
     fadeOut(function(e) {
         e.remove();
@@ -19,20 +25,29 @@ function fadeOut(callback, e)
     
     if (selfCard)
     {
-        doFade();
+        doFade(20);
     }
     
-    function doFade() {
-        if(parseFloat(selfCard.style.opacity) >0 )
-        {
+    function doFade(z) {
+        //if(parseFloat(selfCard.style.opacity) >0 )
+        //{
         	
-            selfCard.style.opacity = parseFloat(selfCard.style.opacity) - 0.05;
-            setTimeout(doFade, 50);
+            //selfCard.style.opacity = parseFloat(selfCard.style.opacity) - 0.05;
+        
+        if(z >0 )
+        {
+            selfCard.classList.add("shrinker");
+            setTimeout(function() {
+            doFade(z-1);
+            }, 30);
         }
         else if (callback)
-        {	
-        	
+        {   
+            
             callback(selfCard);
         }
+
+            //callback(selfCard);
+        //}
     }
 }
