@@ -216,14 +216,22 @@ h1 {
 .card_sub {
 	
 	display: flex;
-	flex-wrap: wrap;
+	#flex-wrap: wrap;
 	width: 100%;
+	background-color: gold;
+	flex-direction: row;
 }
 .card_device {
-	min-width: 180px;
+	#min-width: 180px;
 	margin-bottom: 21px;
 	margin-right: auto;
 	
+}
+.fl_dir_row {
+	flex-direction: row;
+}
+.fl_dir_col {
+	flex-direction: column;
 }
 
 .ynbtn {
