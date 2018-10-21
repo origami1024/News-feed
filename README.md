@@ -1,4 +1,5 @@
 # newsfeed
+https://github.com/origami1024/News-feed
 
 Использовал grid для главной сетки и flex внутри карточек.
 
@@ -10,5 +11,5 @@ Grid для главной сетки, чтобы все карточки был
 
 
 TODO:
-1) change onlicks// js onclick listener
-
+1) smallest resolution to 320px
+2) moz btn size fix

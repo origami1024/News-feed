@@ -8,6 +8,18 @@ function removeSelf1(e) {
     removeSelf(e);
 }
 */
+function next() {
+    alert("ok");
+}
+var x = document.getElementsByClassName("btnclose");
+for (var i = 0; i < x.length; i++) {
+    x[i].addEventListener("click", removeSelf);
+}
+
+var x = document.getElementsByClassName("btnnext");
+for (var i = 0; i < x.length; i++) {
+    x[i].addEventListener("click", next);
+}
 
 function removeSelf(e)
 {

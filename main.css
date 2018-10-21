@@ -218,7 +218,6 @@ h1 {
 	display: flex;
 	#flex-wrap: wrap;
 	width: 100%;
-	background-color: gold;
 	flex-direction: row;
 }
 .card_device {
@@ -488,7 +487,6 @@ h1 {
 .navlinkfooter:visited {
 	color:#858585;
 	text-decoration: none;
-	
 }
 
 
