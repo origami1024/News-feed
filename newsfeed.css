@@ -52,7 +52,6 @@ body {
 	right: 20px;
 	font-size: 1.25rem;
 	z-index: 2;
-
 	list-style-type: none;
 	transform: translate(0, -300%);
 	transition: transform 0.1s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -60,10 +59,8 @@ body {
 #header ul li{
 	display: block;
 	margin-right: 0px;
-
 }
 #header ul {
-
 	width: auto;
 	margin: 0;
 	margin-left: auto;
