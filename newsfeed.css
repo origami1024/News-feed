@@ -205,7 +205,7 @@ h1 {
 }
 .card_icon_container{
 
-	width: calc((375+72.5vw) / 30);
+	width: calc((375px + 72.5vw) / 30);
 	min-width: 30px;
 	margin-top: auto;
 	margin-bottom: auto;
