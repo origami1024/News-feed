@@ -1,5 +1,5 @@
 # newsfeed
-https://github.com/origami1024/News-feed
+https://origami1024.github.io/News-feed/
 
 Использовал grid для главной сетки и flex внутри карточек.
 
